@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 import umap
-
+from datasets import load_dataset
 # -----------------------------
 # 1. Load dataset
 # -----------------------------
-df = pd.read_csv(r"C:\Users\tareq\OneDrive\Desktop\go_emotions_dataset.csv")
+dataset = load_dataset("go_emotions")
 
 # Clean column names
 df.columns = df.columns.str.strip()
