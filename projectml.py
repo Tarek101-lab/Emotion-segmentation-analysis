@@ -12,11 +12,12 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import f1_score, hamming_loss
 import umap
 import matplotlib.pyplot as plt
+from datasets import load_dataset
 
 # =============================
 # 1. Load Dataset and cleaning
 # =============================
-df = pd.read_csv(r"C:\Users\tareq\OneDrive\Desktop\go_emotions_dataset.csv")
+dataset = load_dataset("go_emotions")
 
 # Limit to first 50,000 rows
 df = df.head(50000)
